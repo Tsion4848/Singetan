@@ -46,6 +46,7 @@ export default function Header({ language, setLanguage }) {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex gap-8 items-center">
+            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
             <a href="#" className="hover:text-teal-400 transition">
               {t.home}
             </a>

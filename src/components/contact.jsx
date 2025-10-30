@@ -1,17 +1,8 @@
 "use client";
 
-import { useState } from "react";
-import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
 
 export default function Contact({ language }) {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-
-  const [submitted, setSubmitted] = useState(false);
-
   const translations = {
     en: {
       title: "Get In Touch",
@@ -70,23 +61,6 @@ export default function Contact({ language }) {
   };
 
   const t = translations[language];
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => {
-      setFormData({ name: "", email: "", message: "" });
-      setSubmitted(false);
-    }, 3000);
-  };
 
   return (
     <section

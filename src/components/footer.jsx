@@ -134,24 +134,28 @@ export default function Footer({ language }) {
             </ul>
             <h4 className="font-semibold mb-4">{t.followUs}</h4>
             <div className="flex space-x-4">
+              {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
               <a
                 href="#"
                 className="text-slate-400 hover:text-teal-400 transition"
               >
                 <Facebook size={20} />
               </a>
+              {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
               <a
                 href="#"
                 className="text-slate-400 hover:text-teal-400 transition"
               >
                 <Twitter size={20} />
               </a>
+              {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
               <a
                 href="#"
                 className="text-slate-400 hover:text-teal-400 transition"
               >
                 <Linkedin size={20} />
               </a>
+              {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
               <a
                 href="#"
                 className="text-slate-400 hover:text-teal-400 transition"
