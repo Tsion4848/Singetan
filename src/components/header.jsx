@@ -15,7 +15,7 @@ export default function Header({ language, setLanguage }) {
     },
     am: {
       home: "ዋና ገጽ",
-      about: "ስለ ኛ",
+      about: "ስለ እኛ",
       services: "አገልግሎቶች",
       contact: "ግንኙነት",
     },
