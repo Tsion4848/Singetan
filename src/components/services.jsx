@@ -20,8 +20,7 @@ export default function Services({ language }) {
         },
         {
           name: "Wholesale Distribution",
-          description:
-            "Groceries - Comprehensive wholesale solutions",
+          description: "Groceries - Comprehensive wholesale solutions",
           icon: "📦",
         },
         {
@@ -100,7 +99,7 @@ export default function Services({ language }) {
   return (
     <section
       id="services"
-      className="py-20 bg-gradient-to-b from-white to-slate-50"
+      className="py-10 bg-gradient-to-b from-white to-slate-50"
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-4xl font-bold text-center text-slate-900 mb-16">

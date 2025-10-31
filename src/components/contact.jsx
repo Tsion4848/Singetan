@@ -24,7 +24,7 @@ export default function Contact({ language }) {
     },
     am: {
       title: "ከእኛ ጋር ይገናኙ",
-      subtitle: "ከእርስዎ ሰማ ለመስማት እንወዳለን። ዛሬ ያግኙን።",
+      subtitle: "ከእርስዎ ለመስማት እንወዳለን። ዛሬ ያግኙን።",
       phone: "ስልክ",
       email: "ኢሜይል",
       address: "አድራሻ",
