@@ -10,9 +10,12 @@ export default function Contact({ language }) {
       phone: "Phone",
       email: "Email",
       address: "Address",
-      phoneNum: "+251 912 663 660",
+      phoneNumbers: ["+251 912 663 660", "0911752862", "0981800600"],
       emailAddr: "info@singetan.com",
-      addressText: "Furii, Shaggar, Oromia, Ethiopia",
+      addresses: [
+        "Nifas Silk Lafto Sub-city, Haile Garment, behind Commercial Bank of Ethiopia Kotari Condominium Branch, Addis Ababa, Ethiopia",
+        "Sheger, Furi Sub-city, Around Jemo 3 Square",
+      ],
       nameLabel: "Name",
       namePlaceholder: "Your name",
       emailLabel: "Email",
@@ -28,9 +31,12 @@ export default function Contact({ language }) {
       phone: "ስልክ",
       email: "ኢሜይል",
       address: "አድራሻ",
-      phoneNum: "+251 912 663 660",
+      phoneNumbers: ["+251 912 663 660", "0911752862", "0981800600"],
       emailAddr: "info@singetan.com",
-      addressText: "ፉሪ፣ ሸገር፣ ኦሮሚያ፣ ኢትዮጵያ",
+      addresses: [
+        "ንፋስ ስልክ ላፍቶ ክ/ከተማ፣ ሀይሌ ጋርመንት፣ ከኢትዮጵያ ንግድ ባንክ ኮተሪ ኮንዶሚኒየም ቅርንጫፍ ጀርባ፣ አዲስ አበባ",
+        "ሸገር፣ ፉሪ ክፍለ ከተማ፣ ከጀሞ 3 አደባባይ አካባቢ",
+      ],
       nameLabel: "ስም",
       namePlaceholder: "ስምዎ",
       emailLabel: "ኢሜይል",
@@ -46,9 +52,12 @@ export default function Contact({ language }) {
       phone: "Bilbila",
       email: "Imeelii",
       address: "Teessoo",
-      phoneNum: "+251 912 663 660",
+      phoneNumbers: ["+251 912 663 660", "0911752862", "0981800600"],
       emailAddr: "info@singetan.com",
-      addressText: "Furii, Shaggar, Oromiyaa, Itoophiyaa",
+      addresses: [
+        "K/magaalaa Nifas Silk Lafto, Haile Garment, Baankii Daldalaa Itoophiyaa damee Kotari duuba, Finfinnee",
+        "Shaggar, Kutaa magaalaa Furii, Naannoo Jemo 3 Square",
+      ],
       nameLabel: "Maqaa",
       namePlaceholder: "Maqaa keessan",
       emailLabel: "Imeelii",
@@ -86,7 +95,12 @@ export default function Contact({ language }) {
                 <h3 className="text-lg font-medium text-slate-900">
                   {t.phone}
                 </h3>
-                <p className="mt-2 text-slate-600">{t.phoneNum}</p>
+                {/* <p className="mt-2 text-slate-600">{t.phoneNum}</p> */}
+                {t.phoneNumbers.map((phone) => (
+                  <p key={phone} className="mt-2 text-slate-600">
+                    {phone}
+                  </p>
+                ))}
               </div>
             </div>
 
@@ -114,7 +128,12 @@ export default function Contact({ language }) {
                 <h3 className="text-lg font-medium text-slate-900">
                   {t.address}
                 </h3>
-                <p className="mt-2 text-slate-600">{t.addressText}</p>
+                {/* <p className="mt-2 text-slate-600">{t.addressText}</p> */}
+                {t.addresses.map((address) => (
+                  <p key={address} className="mt-2 text-slate-600">
+                    {address}
+                  </p>
+                ))}
               </div>
             </div>
           </div>

@@ -17,12 +17,16 @@ export default function Footer({ language }) {
       cafe: "Cafe & Restaurant",
       wholesale: "Wholesale Distribution",
       coffee: "Coffee & Tea Wholesale",
+      ethioTelecom: "Ethio Telecom Partner",
       visionMission: "Vision & Mission",
       services: "Services",
       contact: "Contact",
-      address: "Address: Furii, Shaggar, Oromia, Ethiopia",
+      addresses: [
+        "Haile Garment, behind CBE, Addis Ababa",
+        "Jemo 3 Square, Sheger, Furi",
+      ],
       email: "Email: info@singetan.com",
-      phone: "Phone: +251 912 663 660",
+      phones: ["Phone: +251 912 663 660", "Phone: 0911752862 / 0981800600"],
       copyright: `© ${currentYear} Singetan Business Group PLC. All rights reserved.`,
     },
     am: {
@@ -37,12 +41,16 @@ export default function Footer({ language }) {
       cafe: "ካፌ እና ሬስቶራንት",
       wholesale: "ጅምላ ስርጭት",
       coffee: "ቡና እና ሻይ ጅምላ",
+      ethioTelecom: "የኢትዮ ቴሌኮም አጋር",
       visionMission: "ራዕይ እና ተልዕኮ",
       services: "አገልግሎቶች",
       contact: "ግንኙነት",
-      address: "አድራሻ: ፉሪ፣ ሸገር፣ ኦሮሚያ፣ ኢትዮጵያ",
+      addresses: [
+        "ሀይሌ ጋርመንት፣ ከኢትዮጵያ ንግድ ባንክ ጀርባ፣ አዲስ አበባ",
+        "ጀሞ 3 አደባባይ፣ ሸገር፣ ፉሪ",
+      ],
       email: "ኢሜይል: info@singetan.com",
-      phone: "ስልክ: +251 912 663 660",
+      phones: ["ስልክ: +251 912 663 660", "ስልክ: 0911752862 / 0981800600"],
       copyright: `© ${currentYear} ሲንጌታን ንግድ ቡድን ፒ.ኤል.ሲ. ሁሉም መብቶች የተጠበቁ ናቸው።`,
     },
     om: {
@@ -58,12 +66,16 @@ export default function Footer({ language }) {
       cafe: "Cafe & Restaurant",
       wholesale: "Gurgurtaa Jimla",
       coffee: "Buna & Shayi Jimla",
+      ethioTelecom: "Walta'iinsa Itiyo-Telekoom",
       visionMission: "Mul'ata fi Ergama",
       services: "Tajaajiloota",
       contact: "Quunnamaa",
-      address: "Teessoo: Furii, Shaggar, Oromiyaa, Itoophiyaa",
+      addresses: [
+        "Haile Garment, CBE duuba, Finfinnee",
+        "Jemo 3 Square, Shaggar, Furii",
+      ],
       email: "Imeelii: info@singetan.com",
-      phone: "Bilbila: +251 912 663 660",
+      phones: ["Bilbila: +251 912 663 660", "Bilbila: 0911752862 / 0981800600"],
       copyright: `© ${currentYear} Garee Daldalaa Singetan PLC. Midhaan hunduu ni eegamtu.`,
     },
   };
@@ -84,6 +96,11 @@ export default function Footer({ language }) {
           <div>
             <h4 className="font-semibold mb-4">{t.businessLines}</h4>
             <ul className="space-y-2 text-sm text-slate-400">
+              <li>
+                <a href="#services" className="hover:text-teal-400 transition">
+                  {t.ethioTelecom}
+                </a>
+              </li>
               <li>
                 <a href="#services" className="hover:text-teal-400 transition">
                   {t.stationery}
@@ -168,11 +185,24 @@ export default function Footer({ language }) {
           {/* Contact */}
           <div>
             <h4 className="font-semibold mb-4">{t.contactInfo}</h4>
-            <p className="text-sm text-slate-400 mb-2">
-              <span className="block">{t.address}</span>
-              <span className="block">{t.email}</span>
-              <span className="block">{t.phone}</span>
-            </p>
+            <div className="text-sm text-slate-400 space-y-2">
+              <div>
+                <p className="font-semibold">Address:</p>
+                {t.addresses.map((address) => (
+                  <span key={address} className="block">
+                    {address}
+                  </span>
+                ))}
+              </div>
+              <div>
+                <span className="block">{t.email}</span>
+                {t.phones.map((phone) => (
+                  <span key={phone} className="block">
+                    {phone}
+                  </span>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
         <div className="border-t border-slate-700 pt-8">

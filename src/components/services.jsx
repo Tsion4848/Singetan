@@ -4,6 +4,12 @@ export default function Services({ language }) {
       title: "Our Business Lines",
       services: [
         {
+          name: "Ethio Telecom Partnership",
+          description:
+            "Exclusive distributor for products like Telebirr, airtime, SIM cards, and devices.",
+          icon: "📱",
+        },
+        {
           name: "Stationery",
           description: "Premium office and school supplies for all your needs",
           icon: "📝",
@@ -35,12 +41,18 @@ export default function Services({ language }) {
       title: "የእኛ ንግድ መስመሮች",
       services: [
         {
+          name: "የኢትዮ ቴሌኮም አጋርነት",
+          description:
+            "እንደ ቴሌብር፣ የአየር ሰዓት፣ ሲም ካርዶች ያሉ የኢትዮ ቴሌኮም ምርቶች ብቸኛ አከፋፋይ።",
+          icon: "📱",
+        },
+        {
           name: "ስታሽነሪ",
           description: "ከፍተኛ ጥራት ያለው ቢሮ እና ትምህርት ቤት አቅርቦቶች",
           icon: "📝",
         },
         {
-          name: "ኮስሜቲክስ እና ሳኒታሪ",
+          name: "ኮስሞቲክስ እና ሳኒታሪ",
           description: "ከፍተኛ ጥራት ያለው ግላዊ እንክብካቤ እና ሳኒታሪ ምርቶች",
           icon: "💄",
         },
@@ -64,6 +76,12 @@ export default function Services({ language }) {
     om: {
       title: "Sarara Daldalaa Keenya",
       services: [
+        {
+          name: "Walta'iinsa Itiyo-Telekoom",
+          description:
+            "Raabsaa addaa oomishaalee Itiyo-Telekoom kanneen akka Telebirr, yeroo bilbilaa, fi kaardii SIM.",
+          icon: "📱",
+        },
         {
           name: "Stationery",
           description: "Midhaa ofisaa fi barnoota qulqullina gaarii",
@@ -106,7 +124,7 @@ export default function Services({ language }) {
           {t.title}
         </h2>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {t.services.map((service, index) => (
             <div
               key={index}
