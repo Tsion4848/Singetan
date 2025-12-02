@@ -68,8 +68,8 @@ export default function Services({ language }) {
             "https://images.unsplash.com/photo-1456735190827-d1262f71b8a3?q=80&w=2073&auto=format&fit=crop",
         },
         {
-          name: "ኮስሞቲክስ እና ሳኒታሪ",
-          description: "ከፍተኛ ጥራት ያለው ግላዊ እንክብካቤ እና ሳኒታሪ ምርቶች።",
+          name: "ኮስሞቲክስ እና ሳኒተሪ",
+          description: "ከፍተኛ ጥራት ያለው ግላዊ እንክብካቤ እና ሳኒተሪ ምርቶች።",
           image:
             "https://www.finalsu.com/site-upload/site-images/buyuk/1623357321-kozmetik-ve-hijyen-urunleri.jpg",
         },
