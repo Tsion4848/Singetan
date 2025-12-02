@@ -10,10 +10,11 @@ function App() {
   const [language, setLanguage] = useState("en");
 
   return (
-    <main className="min-h-screen bg-background">
+    <main className="min-h-screen bg-background font-sans text-foreground">
       <Header language={language} setLanguage={setLanguage} />
       <Hero language={language} />
       <AboutUs language={language} />
+      {/* Note: I removed VisionMission here because it is now inside AboutUs for better layout */}
       <Services language={language} />
       <Contact language={language} />
       <Footer language={language} />

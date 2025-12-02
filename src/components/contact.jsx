@@ -13,17 +13,9 @@ export default function Contact({ language }) {
       phoneNumbers: ["+251 912 663 660", "0911752862", "0981800600"],
       emailAddr: "info@singetan.com",
       addresses: [
-        "Nifas Silk Lafto Sub-city, Haile Garment, behind Commercial Bank of Ethiopia Kotari Condominium Branch, Addis Ababa, Ethiopia",
+        "Nifas Silk Lafto Sub-city, Haile Garment, behind CBE Kotari Branch, Addis Ababa",
         "Sheger, Furi Sub-city, Around Jemo 3 Square",
       ],
-      nameLabel: "Name",
-      namePlaceholder: "Your name",
-      emailLabel: "Email",
-      emailPlaceholder: "your@email.com",
-      messageLabel: "Message",
-      messagePlaceholder: "Your message",
-      sendBtn: "Send Message",
-      successMsg: "Thank you! Your message has been sent successfully.",
     },
     am: {
       title: "ከእኛ ጋር ይገናኙ",
@@ -34,17 +26,9 @@ export default function Contact({ language }) {
       phoneNumbers: ["+251 912 663 660", "0911752862", "0981800600"],
       emailAddr: "info@singetan.com",
       addresses: [
-        "ንፋስ ስልክ ላፍቶ ክ/ከተማ፣ ሀይሌ ጋርመንት፣ ከኢትዮጵያ ንግድ ባንክ ኮተሪ ኮንዶሚኒየም ቅርንጫፍ ጀርባ፣ አዲስ አበባ",
+        "ንፋስ ስልክ ላፍቶ ክ/ከተማ፣ ሀይሌ ጋርመንት፣ ከኢትዮጵያ ንግድ ባንክ ኮተሪ ቅርንጫፍ ጀርባ",
         "ሸገር፣ ፉሪ ክፍለ ከተማ፣ ከጀሞ 3 አደባባይ አካባቢ",
       ],
-      nameLabel: "ስም",
-      namePlaceholder: "ስምዎ",
-      emailLabel: "ኢሜይል",
-      emailPlaceholder: "your@email.com",
-      messageLabel: "መልእክት",
-      messagePlaceholder: "መልእክትዎ",
-      sendBtn: "መልእክት ላክ",
-      successMsg: "አመሰግናለሁ! መልእክትዎ በተሳካ ሁኔታ ተልኩ።",
     },
     om: {
       title: "Waliin Quunnamaa",
@@ -55,17 +39,9 @@ export default function Contact({ language }) {
       phoneNumbers: ["+251 912 663 660", "0911752862", "0981800600"],
       emailAddr: "info@singetan.com",
       addresses: [
-        "K/magaalaa Nifas Silk Lafto, Haile Garment, Baankii Daldalaa Itoophiyaa damee Kotari duuba, Finfinnee",
+        "K/magaalaa Nifas Silk Lafto, Haile Garment, Baankii Daldalaa Itoophiyaa damee Kotari duuba",
         "Shaggar, Kutaa magaalaa Furii, Naannoo Jemo 3 Square",
       ],
-      nameLabel: "Maqaa",
-      namePlaceholder: "Maqaa keessan",
-      emailLabel: "Imeelii",
-      emailPlaceholder: "your@email.com",
-      messageLabel: "Ergaa",
-      messagePlaceholder: "Ergaa keessan",
-      sendBtn: "Ergaa Ergi",
-      successMsg: "Galatasii! Ergaan keessan guutummaatti ergamee jira.",
     },
   };
 
@@ -74,144 +50,54 @@ export default function Contact({ language }) {
   return (
     <section
       id="contact"
-      className="py-10 bg-gradient-to-b from-slate-50 to-white"
+      className="py-24 bg-slate-900 text-white relative overflow-hidden"
     >
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Decorative Circles */}
+      <div className="absolute top-0 right-0 w-64 h-64 bg-teal-500/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+      <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
+
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-slate-900 mb-4">{t.title}</h2>
-          <p className="text-xl text-slate-600">{t.subtitle}</p>
+          <h2 className="text-4xl font-extrabold mb-4">{t.title}</h2>
+          <p className="text-xl text-slate-400">{t.subtitle}</p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12">
-          {/* Contact Information */}
-          <div className="space-y-8">
-            <div className="flex items-start gap-4">
-              <div className="flex-shrink-0">
-                <div className="flex items-center justify-center h-12 w-12 rounded-md bg-teal-600 text-white">
-                  <Phone className="h-6 w-6" />
-                </div>
-              </div>
-              <div>
-                <h3 className="text-lg font-medium text-slate-900">
-                  {t.phone}
-                </h3>
-                {/* <p className="mt-2 text-slate-600">{t.phoneNum}</p> */}
-                {t.phoneNumbers.map((phone) => (
-                  <p key={phone} className="mt-2 text-slate-600">
-                    {phone}
-                  </p>
-                ))}
-              </div>
+        <div className="grid md:grid-cols-3 gap-8">
+          {/* Phone */}
+          <div className="bg-slate-800/50 backdrop-blur-sm p-8 rounded-2xl border border-slate-700 hover:border-teal-500/50 transition duration-300">
+            <div className="flex items-center justify-center w-14 h-14 bg-teal-900/50 rounded-full text-teal-400 mb-6 mx-auto">
+              <Phone className="h-6 w-6" />
             </div>
-
-            <div className="flex items-start gap-4">
-              <div className="flex-shrink-0">
-                <div className="flex items-center justify-center h-12 w-12 rounded-md bg-teal-600 text-white">
-                  <Mail className="h-6 w-6" />
-                </div>
-              </div>
-              <div>
-                <h3 className="text-lg font-medium text-slate-900">
-                  {t.email}
-                </h3>
-                <p className="mt-2 text-slate-600">{t.emailAddr}</p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-4">
-              <div className="flex-shrink-0">
-                <div className="flex items-center justify-center h-12 w-12 rounded-md bg-teal-600 text-white">
-                  <MapPin className="h-6 w-6" />
-                </div>
-              </div>
-              <div>
-                <h3 className="text-lg font-medium text-slate-900">
-                  {t.address}
-                </h3>
-                {/* <p className="mt-2 text-slate-600">{t.addressText}</p> */}
-                {t.addresses.map((address) => (
-                  <p key={address} className="mt-2 text-slate-600">
-                    {address}
-                  </p>
-                ))}
-              </div>
+            <h3 className="text-xl font-bold text-center mb-4">{t.phone}</h3>
+            <div className="text-center text-slate-300 space-y-1">
+              {t.phoneNumbers.map((phone) => (
+                <p key={phone}>{phone}</p>
+              ))}
             </div>
           </div>
 
-          {/* Contact Form */}
-          <div>
-            {/* <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <label
-                  htmlFor="name"
-                  className="block text-sm font-medium text-slate-900"
-                >
-                  {t.nameLabel}
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                  className="mt-1 block w-full px-4 py-2 border border-slate-300 rounded-lg shadow-sm focus:ring-teal-500 focus:border-teal-500"
-                  placeholder={t.namePlaceholder}
-                />
-              </div>
+          {/* Email */}
+          <div className="bg-slate-800/50 backdrop-blur-sm p-8 rounded-2xl border border-slate-700 hover:border-teal-500/50 transition duration-300">
+            <div className="flex items-center justify-center w-14 h-14 bg-blue-900/50 rounded-full text-blue-400 mb-6 mx-auto">
+              <Mail className="h-6 w-6" />
+            </div>
+            <h3 className="text-xl font-bold text-center mb-4">{t.email}</h3>
+            <p className="text-center text-slate-300">{t.emailAddr}</p>
+          </div>
 
-              <div>
-                <label
-                  htmlFor="email"
-                  className="block text-sm font-medium text-slate-900"
-                >
-                  {t.emailLabel}
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                  className="mt-1 block w-full px-4 py-2 border border-slate-300 rounded-lg shadow-sm focus:ring-teal-500 focus:border-teal-500"
-                  placeholder={t.emailPlaceholder}
-                />
-              </div>
-
-              <div>
-                <label
-                  htmlFor="message"
-                  className="block text-sm font-medium text-slate-900"
-                >
-                  {t.messageLabel}
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                  rows="4"
-                  className="mt-1 block w-full px-4 py-2 border border-slate-300 rounded-lg shadow-sm focus:ring-teal-500 focus:border-teal-500"
-                  placeholder={t.messagePlaceholder}
-                />
-              </div>
-
-              <button
-                type="submit"
-                className="w-full bg-teal-600 text-white py-3 rounded-lg font-semibold hover:bg-teal-700 transition-colors flex items-center justify-center gap-2"
-              >
-                <Send className="h-5 w-5" />
-                {t.sendBtn}
-              </button>
-
-              {submitted && (
-                <div className="p-4 bg-green-50 border border-green-200 rounded-lg text-green-800">
-                  {t.successMsg}
-                </div>
-              )}
-            </form> */}
+          {/* Address */}
+          <div className="bg-slate-800/50 backdrop-blur-sm p-8 rounded-2xl border border-slate-700 hover:border-teal-500/50 transition duration-300">
+            <div className="flex items-center justify-center w-14 h-14 bg-purple-900/50 rounded-full text-purple-400 mb-6 mx-auto">
+              <MapPin className="h-6 w-6" />
+            </div>
+            <h3 className="text-xl font-bold text-center mb-4">{t.address}</h3>
+            <div className="text-center text-slate-300 space-y-4">
+              {t.addresses.map((address, idx) => (
+                <p key={idx} className="leading-relaxed">
+                  {address}
+                </p>
+              ))}
+            </div>
           </div>
         </div>
       </div>
